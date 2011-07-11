@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		E34B395913CBC2370037AD47 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E34B395813CBC2370037AD47 /* main.cpp */; };
+		E34B396913CBC2A20037AD47 /* MathHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E34B396113CBC2A20037AD47 /* MathHelper.cpp */; };
+		E34B396A13CBC2A20037AD47 /* Matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E34B396313CBC2A20037AD47 /* Matrix.cpp */; };
+		E34B396B13CBC2A20037AD47 /* Quaternion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E34B396513CBC2A20037AD47 /* Quaternion.cpp */; };
+		E34B396C13CBC2A20037AD47 /* Vector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E34B396713CBC2A20037AD47 /* Vector.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,6 +30,14 @@
 		E34B395413CBC2370037AD47 /* MathBag */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MathBag; sourceTree = BUILT_PRODUCTS_DIR; };
 		E34B395813CBC2370037AD47 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		E34B395A13CBC2370037AD47 /* MathBag.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = MathBag.1; sourceTree = "<group>"; };
+		E34B396113CBC2A20037AD47 /* MathHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MathHelper.cpp; path = src/MathHelper.cpp; sourceTree = "<group>"; };
+		E34B396213CBC2A20037AD47 /* MathHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MathHelper.h; path = src/MathHelper.h; sourceTree = "<group>"; };
+		E34B396313CBC2A20037AD47 /* Matrix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Matrix.cpp; path = src/Matrix.cpp; sourceTree = "<group>"; };
+		E34B396413CBC2A20037AD47 /* Matrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Matrix.h; path = src/Matrix.h; sourceTree = "<group>"; };
+		E34B396513CBC2A20037AD47 /* Quaternion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Quaternion.cpp; path = src/Quaternion.cpp; sourceTree = "<group>"; };
+		E34B396613CBC2A20037AD47 /* Quaternion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Quaternion.h; path = src/Quaternion.h; sourceTree = "<group>"; };
+		E34B396713CBC2A20037AD47 /* Vector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Vector.cpp; path = src/Vector.cpp; sourceTree = "<group>"; };
+		E34B396813CBC2A20037AD47 /* Vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Vector.h; path = src/Vector.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +70,26 @@
 		E34B395713CBC2370037AD47 /* MathBag */ = {
 			isa = PBXGroup;
 			children = (
+				E34B396013CBC28D0037AD47 /* src */,
 				E34B395813CBC2370037AD47 /* main.cpp */,
 				E34B395A13CBC2370037AD47 /* MathBag.1 */,
 			);
 			path = MathBag;
+			sourceTree = "<group>";
+		};
+		E34B396013CBC28D0037AD47 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				E34B396113CBC2A20037AD47 /* MathHelper.cpp */,
+				E34B396213CBC2A20037AD47 /* MathHelper.h */,
+				E34B396313CBC2A20037AD47 /* Matrix.cpp */,
+				E34B396413CBC2A20037AD47 /* Matrix.h */,
+				E34B396513CBC2A20037AD47 /* Quaternion.cpp */,
+				E34B396613CBC2A20037AD47 /* Quaternion.h */,
+				E34B396713CBC2A20037AD47 /* Vector.cpp */,
+				E34B396813CBC2A20037AD47 /* Vector.h */,
+			);
+			name = src;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -115,6 +143,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E34B395913CBC2370037AD47 /* main.cpp in Sources */,
+				E34B396913CBC2A20037AD47 /* MathHelper.cpp in Sources */,
+				E34B396A13CBC2A20037AD47 /* Matrix.cpp in Sources */,
+				E34B396B13CBC2A20037AD47 /* Quaternion.cpp in Sources */,
+				E34B396C13CBC2A20037AD47 /* Vector.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
