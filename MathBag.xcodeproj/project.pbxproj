@@ -1,0 +1,201 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E34B395913CBC2370037AD47 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E34B395813CBC2370037AD47 /* main.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E34B395213CBC2370037AD47 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		E34B395413CBC2370037AD47 /* MathBag */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MathBag; sourceTree = BUILT_PRODUCTS_DIR; };
+		E34B395813CBC2370037AD47 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		E34B395A13CBC2370037AD47 /* MathBag.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = MathBag.1; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E34B395113CBC2370037AD47 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E34B394913CBC2370037AD47 = {
+			isa = PBXGroup;
+			children = (
+				E34B395713CBC2370037AD47 /* MathBag */,
+				E34B395513CBC2370037AD47 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E34B395513CBC2370037AD47 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E34B395413CBC2370037AD47 /* MathBag */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E34B395713CBC2370037AD47 /* MathBag */ = {
+			isa = PBXGroup;
+			children = (
+				E34B395813CBC2370037AD47 /* main.cpp */,
+				E34B395A13CBC2370037AD47 /* MathBag.1 */,
+			);
+			path = MathBag;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E34B395313CBC2370037AD47 /* MathBag */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E34B395D13CBC2370037AD47 /* Build configuration list for PBXNativeTarget "MathBag" */;
+			buildPhases = (
+				E34B395013CBC2370037AD47 /* Sources */,
+				E34B395113CBC2370037AD47 /* Frameworks */,
+				E34B395213CBC2370037AD47 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MathBag;
+			productName = MathBag;
+			productReference = E34B395413CBC2370037AD47 /* MathBag */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E34B394B13CBC2370037AD47 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Concordia University";
+			};
+			buildConfigurationList = E34B394E13CBC2370037AD47 /* Build configuration list for PBXProject "MathBag" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E34B394913CBC2370037AD47;
+			productRefGroup = E34B395513CBC2370037AD47 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E34B395313CBC2370037AD47 /* MathBag */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E34B395013CBC2370037AD47 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E34B395913CBC2370037AD47 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		E34B395B13CBC2370037AD47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E34B395C13CBC2370037AD47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E34B395E13CBC2370037AD47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E34B395F13CBC2370037AD47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E34B394E13CBC2370037AD47 /* Build configuration list for PBXProject "MathBag" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E34B395B13CBC2370037AD47 /* Debug */,
+				E34B395C13CBC2370037AD47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E34B395D13CBC2370037AD47 /* Build configuration list for PBXNativeTarget "MathBag" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E34B395E13CBC2370037AD47 /* Debug */,
+				E34B395F13CBC2370037AD47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E34B394B13CBC2370037AD47 /* Project object */;
+}
