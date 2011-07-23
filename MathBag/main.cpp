@@ -13,6 +13,7 @@
 #include "Quaternion.h"
 
 using namespace std;
+using namespace MathBag;
 
 bool Matrix4Test();
 bool QuaternionTest();
