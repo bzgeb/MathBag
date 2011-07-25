@@ -8,6 +8,7 @@
 
 #include <iostream>
 
+#include "Precision.h"
 #include "Vector.h"
 #include "Quaternion.h"
 
@@ -20,16 +21,16 @@ namespace MathBag
     {
     public:
         // Members
-        float m[4][4];
+        real m[4][4];
         
         
         // Constructor, Destructor
         Matrix4();
-        Matrix4(float m00, float m01, float m02, float m03,
-                float m10, float m11, float m12, float m13,
-                float m20, float m21, float m22, float m23,
-                float m30, float m31, float m32, float m33);
-        Matrix4(float matrix[4][4]);
+        Matrix4(real m00, real m01, real m02, real m03,
+                real m10, real m11, real m12, real m13,
+                real m20, real m21, real m22, real m23,
+                real m30, real m31, real m32, real m33);
+        Matrix4(real matrix[4][4]);
         Matrix4(const Matrix4 &other);
         Matrix4(const Quaternion &quaternion);
         ~Matrix4();
@@ -40,8 +41,8 @@ namespace MathBag
         friend Matrix4 operator+ (const Matrix4 &m1, const Matrix4 &m2);
         Matrix4 operator-= (const Matrix4 & other);
         friend Matrix4 operator- (const Matrix4 &m1, const Matrix4 &m2);
-        float & operator() (int i, int j);
-        const float & operator() (int i, int j) const;
+        real & operator() (int i, int j);
+        const real & operator() (int i, int j) const;
         Matrix4 operator*= (const Matrix4 &other);
         friend Matrix4 operator* (const Matrix4 &m1, const Matrix4 &m2);
         bool operator== (const Matrix4 &other) const;
@@ -59,13 +60,13 @@ namespace MathBag
         
         
         // Static Methods
-        static Matrix4 createFromAxisAngle(const Vector3 &axis, float angle);
-        static Matrix4 createFromYawPitchRoll(float yaw, float pitch, float roll);
-        static Matrix4 createRotationX(float radians);
-        static Matrix4 createRotationY(float radians);
-        static Matrix4 createRotationZ(float radians);
+        static Matrix4 createFromAxisAngle(const Vector3 &axis, real angle);
+        static Matrix4 createFromYawPitchRoll(real yaw, real pitch, real roll);
+        static Matrix4 createRotationX(real radians);
+        static Matrix4 createRotationY(real radians);
+        static Matrix4 createRotationZ(real radians);
         static Matrix4 createLookAt(const Vector3 &cameraPosition, const Vector3 &cameraTarget, const Vector3 &cameraUpVector);
-        static Matrix4 createTranslation(float x, float y, float z);
+        static Matrix4 createTranslation(real x, real y, real z);
         static Matrix4 createTranslation(const Vector3 &position);
         static Matrix4 createFromQuaternion(const Quaternion &quaternion);
         static Matrix4 transpose(const Matrix4 &matrix);

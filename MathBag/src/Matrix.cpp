@@ -7,6 +7,7 @@
 
 #include <assert.h>
     
+#include "Precision.h"
 #include "Matrix.h"
 
 namespace MathBag
@@ -33,10 +34,10 @@ namespace MathBag
         m[3][3] = 0;
     }
     
-    Matrix4::Matrix4(float m00, float m01, float m02, float m03,
-                     float m10, float m11, float m12, float m13,
-                     float m20, float m21, float m22, float m23,
-                     float m30, float m31, float m32, float m33)
+    Matrix4::Matrix4(real m00, real m01, real m02, real m03,
+                     real m10, real m11, real m12, real m13,
+                     real m20, real m21, real m22, real m23,
+                     real m30, real m31, real m32, real m33)
     {
         m[0][0] = m00;
         m[0][1] = m01;
@@ -56,7 +57,7 @@ namespace MathBag
         m[3][3] = m33;
     }
     
-    Matrix4::Matrix4(float matrix[4][4])
+    Matrix4::Matrix4(real matrix[4][4])
     {
         for (int i = 0; i < 4; ++i)
         {
@@ -147,13 +148,13 @@ namespace MathBag
     }
     
     
-    float & Matrix4::operator()(int i, int j)
+    real & Matrix4::operator()(int i, int j)
     {
         return m[i][j];
     }
     
     
-    const float & Matrix4::operator()(int i, int j) const
+    const real & Matrix4::operator()(int i, int j) const
     {
         return m[i][j];
     }
@@ -220,7 +221,7 @@ namespace MathBag
         return !(*this == other);
     }
     
-    Matrix4 Matrix4::createFromAxisAngle(const Vector3 &axis, float angle)
+    Matrix4 Matrix4::createFromAxisAngle(const Vector3 &axis, real angle)
     {
         Matrix4 output;
         
@@ -231,19 +232,19 @@ namespace MathBag
         double s = sin(angle);
         double t = 1 - c;
         
-        output.m[0][0] = float(t * unitAxis.x * unitAxis.x + c);
-        output.m[0][1] = float(t * unitAxis.y * unitAxis.x - s * unitAxis.z);
-        output.m[0][2] = float(t * unitAxis.z * unitAxis.x + s * unitAxis.y);
+        output.m[0][0] = real(t * unitAxis.x * unitAxis.x + c);
+        output.m[0][1] = real(t * unitAxis.y * unitAxis.x - s * unitAxis.z);
+        output.m[0][2] = real(t * unitAxis.z * unitAxis.x + s * unitAxis.y);
         output.m[0][3] = 0;
         
-        output.m[1][0] = float(t * unitAxis.x * unitAxis.y + s * unitAxis.z);
-        output.m[1][1] = float(t * unitAxis.y * unitAxis.y + c);
-        output.m[1][2] = float(t * unitAxis.z * unitAxis.y - s * unitAxis.x);
+        output.m[1][0] = real(t * unitAxis.x * unitAxis.y + s * unitAxis.z);
+        output.m[1][1] = real(t * unitAxis.y * unitAxis.y + c);
+        output.m[1][2] = real(t * unitAxis.z * unitAxis.y - s * unitAxis.x);
         output.m[1][3] = 0;
         
-        output.m[2][0] = float(t * unitAxis.x * unitAxis.z - s * unitAxis.y);
-        output.m[2][1] = float(t * unitAxis.y * unitAxis.z + s * unitAxis.x);
-        output.m[2][2] = float(t * unitAxis.z * unitAxis.z + c);
+        output.m[2][0] = real(t * unitAxis.x * unitAxis.z - s * unitAxis.y);
+        output.m[2][1] = real(t * unitAxis.y * unitAxis.z + s * unitAxis.x);
+        output.m[2][2] = real(t * unitAxis.z * unitAxis.z + c);
         output.m[2][3] = 0;
         
         output.m[3][0] = 0;
@@ -254,26 +255,26 @@ namespace MathBag
         return output;
     }
     
-    Matrix4 Matrix4::createFromYawPitchRoll(float yaw, float pitch, float roll)
+    Matrix4 Matrix4::createFromYawPitchRoll(real yaw, real pitch, real roll)
     {
         Quaternion quaternion = Quaternion::createFromYawPitchRoll(yaw, pitch, roll);
         return Matrix4(quaternion);
     }
     
-    Matrix4 Matrix4::createRotationX(float radians)
+    Matrix4 Matrix4::createRotationX(real radians)
     {
         Matrix4 output;
         
         double c = cos(radians);
         double s = sin(radians);
         
-        output.m[0][0] = float(c);
-        output.m[0][1] = float(-s);
+        output.m[0][0] = real(c);
+        output.m[0][1] = real(-s);
         output.m[0][2] = 0;
         output.m[0][3] = 0;
         
-        output.m[1][0] = float(s);
-        output.m[1][1] = float(c);
+        output.m[1][0] = real(s);
+        output.m[1][1] = real(c);
         output.m[1][2] = 0;
         output.m[1][3] = 0;
         
@@ -290,16 +291,16 @@ namespace MathBag
         return output;
     }
     
-    Matrix4 Matrix4::createRotationY(float radians)
+    Matrix4 Matrix4::createRotationY(real radians)
     {
         Matrix4 output;
         
         double c = cos(radians);
         double s = sin(radians);
         
-        output.m[0][0] = float(c);
+        output.m[0][0] = real(c);
         output.m[0][1] = 0;
-        output.m[0][2] = float(s);
+        output.m[0][2] = real(s);
         output.m[0][3] = 0;
         
         output.m[1][0] = 0;
@@ -307,9 +308,9 @@ namespace MathBag
         output.m[1][2] = 0;
         output.m[1][3] = 0;
         
-        output.m[2][0] = float(-s);
+        output.m[2][0] = real(-s);
         output.m[2][1] = 0;
-        output.m[2][2] = float(c);
+        output.m[2][2] = real(c);
         output.m[2][3] = 0;
         
         output.m[3][0] = 0;
@@ -320,7 +321,7 @@ namespace MathBag
         return output;
     }
     
-    Matrix4 Matrix4::createRotationZ(float radians)
+    Matrix4 Matrix4::createRotationZ(real radians)
     {
         Matrix4 output;
         
@@ -333,13 +334,13 @@ namespace MathBag
         output.m[0][3] = 0;
         
         output.m[1][0] = 0;
-        output.m[1][1] = float(c);
-        output.m[1][2] = float(-s);
+        output.m[1][1] = real(c);
+        output.m[1][2] = real(-s);
         output.m[1][3] = 0;
         
         output.m[2][0] = 0;
-        output.m[2][1] = float(s);
-        output.m[2][2] = float(c);
+        output.m[2][1] = real(s);
+        output.m[2][2] = real(c);
         output.m[2][3] = 0;
         
         output.m[3][0] = 0;
@@ -380,7 +381,7 @@ namespace MathBag
         return output;
     }
     
-    Matrix4 Matrix4::createTranslation(float x, float y, float z)
+    Matrix4 Matrix4::createTranslation(real x, real y, real z)
     {
         Matrix4 output = Matrix4::Identity;
         

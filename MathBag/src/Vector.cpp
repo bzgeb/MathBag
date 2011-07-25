@@ -18,35 +18,35 @@ namespace MathBag
     x(0), y(0), z(0)
     {}
     
-    Vector3::Vector3(GLfloat pX, GLfloat pY, GLfloat pZ) :
+    Vector3::Vector3(real pX, real pY, real pZ) :
     x(pX), y(pY), z(pZ)
     {}
     
     Vector3::~Vector3()
     {}
     
-    GLfloat Vector3::length() const
+    real Vector3::length() const
     {
-        GLfloat magnitude = sqrt(x*x+y*y+z*z);
+        real magnitude = sqrt(x*x+y*y+z*z);
         return magnitude;
     }
     
-    GLfloat Vector3::lengthSquared() const
+    real Vector3::lengthSquared() const
     {
-        GLfloat magnitudeSquared = (x*x+y*y+z*z);
+        real magnitudeSquared = (x*x+y*y+z*z);
         return magnitudeSquared;
     }
     
     void Vector3::normalize()
     {
-        GLfloat length = this->length();
+        real length = this->length();
         
         x = x/length;
         y = y/length;
         z = z/length;
     }
     
-    GLfloat Vector3::dot(const Vector3 &other) const
+    real Vector3::dot(const Vector3 &other) const
     {
         return (x * other.x + y * other.y + z * other.z);
     }
@@ -80,12 +80,12 @@ namespace MathBag
         return *this;
     }
     
-    Vector3 operator* (const Vector3 &vector, const GLfloat amount)
+    Vector3 operator* (const Vector3 &vector, const real amount)
     {
         return Vector3(vector.x * amount, vector.y * amount, vector.z * amount);
     }
     
-    Vector3 operator* (const GLfloat amount, const Vector3 &vector)
+    Vector3 operator* (const real amount, const Vector3 &vector)
     {
         return vector * amount;
     }
@@ -109,7 +109,7 @@ namespace MathBag
     Vector3 Vector3::normalize(const Vector3 &vector)
     {
         Vector3 output;
-        GLfloat length = vector.length();
+        real length = vector.length();
         
         output.x = vector.x / length;
         output.y = vector.y / length;
@@ -120,16 +120,16 @@ namespace MathBag
     
     Vector3 Vector3::cross(const Vector3 &vector1, const Vector3 &vector2)
     {
-        GLfloat x = vector1.y * vector2.z - vector2.y * vector1.z;
-        GLfloat y = vector1.z * vector2.x - vector2.z * vector1.x;
-        GLfloat z = vector1.x * vector2.y - vector2.x * vector1.y;
+        real x = vector1.y * vector2.z - vector2.y * vector1.z;
+        real y = vector1.z * vector2.x - vector2.z * vector1.x;
+        real z = vector1.x * vector2.y - vector2.x * vector1.y;
         
         return Vector3(x, y, z);
     }
     
-    GLfloat Vector3::dot(const Vector3 &vector1, const Vector3 &vector2)
+    real Vector3::dot(const Vector3 &vector1, const Vector3 &vector2)
     {
-        return GLfloat(vector1.x * vector2.x + vector1.y * vector2.y + vector1.z * vector2.z);
+        return real(vector1.x * vector2.x + vector1.y * vector2.y + vector1.z * vector2.z);
     }
     
     Vector3 Vector3::transform(const Vector3 &vector, const Matrix4 &matrix)

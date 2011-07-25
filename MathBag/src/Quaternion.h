@@ -6,7 +6,9 @@
 //
 #pragma once
 
+#include "Precision.h"
 #include "Vector.h"
+
 namespace MathBag
 {
     class Vector3;
@@ -16,16 +18,16 @@ namespace MathBag
     {
     public:
         // Members
-        float w;
-        float x;
-        float y;
-        float z;
+        real w;
+        real x;
+        real y;
+        real z;
         
         
         // Constructor, Destructor
         Quaternion();
-        explicit Quaternion(float x, float y, float z, float w);
-        explicit Quaternion(Vector3 vectorPart, float scalarPart);
+        explicit Quaternion(real x, real y, real z, real w);
+        explicit Quaternion(Vector3 vectorPart, real scalarPart);
         ~Quaternion();
         
         
@@ -41,12 +43,13 @@ namespace MathBag
         
         
         // Static Methods
-        static Quaternion createFromYawPitchRoll(float yaw, float pitch, float roll);
-        static Quaternion createFromAxisAngle(Vector3 axis, float radians);
-        static Quaternion createFromRotationX(float radians);
-        static Quaternion createFromRotationY(float radians);
-        static Quaternion createFromRotationZ(float radians);
+        static Quaternion createFromYawPitchRoll(real yaw, real pitch, real roll);
+        static Quaternion createFromAxisAngle(Vector3 axis, real radians);
+        static Quaternion createFromRotationX(real radians);
+        static Quaternion createFromRotationY(real radians);
+        static Quaternion createFromRotationZ(real radians);
         //    static Quaternion createFromRotationMatrix(Matrix4 rotationMatrix);
+        static Quaternion normalize(const Quaternion &q1);
         
         
         // Static Properties

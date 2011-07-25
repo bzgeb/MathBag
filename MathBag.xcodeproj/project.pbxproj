@@ -38,6 +38,7 @@
 		E34B396613CBC2A20037AD47 /* Quaternion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Quaternion.h; path = src/Quaternion.h; sourceTree = "<group>"; };
 		E34B396713CBC2A20037AD47 /* Vector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Vector.cpp; path = src/Vector.cpp; sourceTree = "<group>"; };
 		E34B396813CBC2A20037AD47 /* Vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Vector.h; path = src/Vector.h; sourceTree = "<group>"; };
+		E382A3C313DDF69800E5030E /* Precision.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Precision.h; path = src/Precision.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +89,7 @@
 				E34B396613CBC2A20037AD47 /* Quaternion.h */,
 				E34B396713CBC2A20037AD47 /* Vector.cpp */,
 				E34B396813CBC2A20037AD47 /* Vector.h */,
+				E382A3C313DDF69800E5030E /* Precision.h */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -226,6 +228,7 @@
 				E34B395F13CBC2370037AD47 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

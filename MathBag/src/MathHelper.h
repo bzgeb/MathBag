@@ -6,25 +6,27 @@
 //
 #pragma once
 
+#include "Precision.h"
+
 namespace MathBag 
 {
     class MathHelper
     {
     public:
-        static const float E;
-        static const float Log10E;
-        //    static const float Log2E;
-        static const float Pi;
-        static const float PiOver2;
-        static const float PiOver4;
-        static const float TwoPi;
+        static const real E;
+        static const real Log10E;
+        //    static const real Log2E;
+        static const real Pi;
+        static const real PiOver2;
+        static const real PiOver4;
+        static const real TwoPi;
         
-        static float clamp(float value, float min, float max);
-        static float distance(float value1, float value2);
-        static float lerp(float value1, float value2, float amount);
-        static float max(float value1, float value2);
-        static float min(float value1, float value2);
-        static float toDegrees(float radians);
-        static float toRadians(float degrees);
+        static real clamp(real value, real min, real max);
+        static real distance(real value1, real value2);
+        static real lerp(real value1, real value2, real amount);
+        static real max(real value1, real value2);
+        static real min(real value1, real value2);
+        static real toDegrees(real radians);
+        static real toRadians(real degrees);
     };
 }

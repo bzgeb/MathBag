@@ -24,6 +24,7 @@
 #include <iostream>
 #include <cmath>
 
+#include "Precision.h"
 #include "Matrix.h"
 
 namespace MathBag
@@ -34,19 +35,19 @@ namespace MathBag
     class Vector3 {
     public:
         // Members
-        GLfloat x, y, z;
+        real x, y, z;
         
         
         // Constructor, Destructors
         Vector3();
-        explicit Vector3(GLfloat pX, GLfloat pY, GLfloat pZ);
+        explicit Vector3(real pX, real pY, real pZ);
         ~Vector3();
         
         
         // Public Methods
-        GLfloat length() const;
-        GLfloat lengthSquared() const;
-        GLfloat dot(const Vector3 &other) const;
+        real length() const;
+        real lengthSquared() const;
+        real dot(const Vector3 &other) const;
         void normalize();
         
         
@@ -56,8 +57,8 @@ namespace MathBag
         friend Vector3 operator- (const Vector3 &vector1, const Vector3 &vector2);
         Vector3 operator-() const;
         Vector3 operator-= (const Vector3 &other);
-        friend Vector3 operator* (const Vector3 &vector, const GLfloat amount);
-        friend Vector3 operator* (const GLfloat amount, const Vector3 &vector);
+        friend Vector3 operator* (const Vector3 &vector, const real amount);
+        friend Vector3 operator* (const real amount, const Vector3 &vector);
         void operator= (const Vector3 &other);
         bool operator== (const Vector3 &other) const;
         friend std::ostream & operator<<(std::ostream &os, const Vector3 &vector);
@@ -66,7 +67,7 @@ namespace MathBag
         // Static Methods
         static Vector3 normalize(const Vector3 &vector);
         static Vector3 cross(const Vector3 &vector1, const Vector3 &vector2);
-        static GLfloat dot(const Vector3 &vector1, const Vector3 &vector2);
+        static real dot(const Vector3 &vector1, const Vector3 &vector2);
         static Vector3 transform(const Vector3 &vector, const Matrix4 &matrix);
         
         
