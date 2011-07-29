@@ -31,7 +31,7 @@ bool Matrix4Test()
 {
     Matrix4 identity = Matrix4::Identity;
     Matrix4 identity_copy = identity;
-    identity_copy.m[0][0] = 0;
+    identity_copy.m[M00] = 0;
     
     Matrix4 transpose = Matrix4(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16);
     

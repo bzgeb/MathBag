@@ -136,9 +136,9 @@ namespace MathBag
     {
         Vector3 output;
         
-        output.x = matrix.m[0][0] * vector.x + matrix.m[0][1] * vector.y + matrix.m[0][2] * vector.z + matrix.m[0][3];
-        output.y = matrix.m[1][0] * vector.x + matrix.m[1][1] * vector.y + matrix.m[1][2] * vector.z + matrix.m[1][3];
-        output.z = matrix.m[2][0] * vector.x + matrix.m[2][1] * vector.y + matrix.m[2][2] * vector.z + matrix.m[2][3];
+        output.x = matrix.m[M00] * vector.x + matrix.m[M01] * vector.y + matrix.m[M02] * vector.z + matrix.m[M03];
+        output.y = matrix.m[M10] * vector.x + matrix.m[M11] * vector.y + matrix.m[M12] * vector.z + matrix.m[M13];
+        output.z = matrix.m[M20] * vector.x + matrix.m[M21] * vector.y + matrix.m[M22] * vector.z + matrix.m[M23];
         
         return output;
     }

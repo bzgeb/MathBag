@@ -17,11 +17,28 @@ namespace MathBag
     class Vector3;
     class Quaternion;
     
+    const int M00 = 0;
+    const int M01 = 4;
+    const int M02 = 8;
+    const int M03 = 12;
+    const int M10 = 1;
+    const int M11 = 5;
+    const int M12 = 9;
+    const int M13 = 13;
+    const int M20 = 2;
+    const int M21 = 6;
+    const int M22 = 10;
+    const int M23 = 14;
+    const int M30 = 3;
+    const int M31 = 7;
+    const int M32 = 11;
+    const int M33 = 15;
+    
     class Matrix4
     {
     public:
         // Members
-        real m[4][4];
+        real m[16];
         
         
         // Constructor, Destructor
@@ -30,7 +47,7 @@ namespace MathBag
                 real m10, real m11, real m12, real m13,
                 real m20, real m21, real m22, real m23,
                 real m30, real m31, real m32, real m33);
-        Matrix4(real matrix[4][4]);
+        Matrix4(real matrix[16]);
         Matrix4(const Matrix4 &other);
         Matrix4(const Quaternion &quaternion);
         ~Matrix4();
@@ -41,8 +58,10 @@ namespace MathBag
         friend Matrix4 operator+ (const Matrix4 &m1, const Matrix4 &m2);
         Matrix4 operator-= (const Matrix4 & other);
         friend Matrix4 operator- (const Matrix4 &m1, const Matrix4 &m2);
-        real & operator() (int i, int j);
-        const real & operator() (int i, int j) const;
+        real & operator() (int i);
+        const real & operator() (int i) const;
+        real & operator[] (int i);
+        const real & operator[] (int i) const;
         Matrix4 operator*= (const Matrix4 &other);
         friend Matrix4 operator* (const Matrix4 &m1, const Matrix4 &m2);
         bool operator== (const Matrix4 &other) const;
